@@ -65,10 +65,12 @@ account.id #=> acc_test_....
 
 ## Installation
 
+**Note** There is another gem called 'pretty_id' so I had to rename mine into prettyid. So, be careful when you install gem and require it. It's a kind'a trick you do with 'activerecord' as well ;)
+
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'pretty_id'
+gem 'prettyid', require: 'pretty_id'
 ```
 
 And then execute:
@@ -77,7 +79,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install pretty_id
+    $ gem install prettyid
 
 
 
