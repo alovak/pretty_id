@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     pretty_id (0.1.0)
+      activerecord (>= 4.2.0)
+      activesupport (>= 4.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -46,7 +48,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   bundler
   pretty_id!
   rake

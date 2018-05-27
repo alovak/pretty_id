@@ -2,12 +2,12 @@ require "bundler/setup"
 require "pretty_id"
 require "active_record"
 
-ActiveRecord::Base.logger = Logger.new(STDERR)
+ActiveRecord::Base.logger = Logger.new(STDERR) if ENV['DEBUG']
 
-ActiveRecord::Base.establish_connection(
-    :adapter => "sqlite3",
-    :database  => ":memory:"
-)
+ActiveRecord::Base.establish_connection({
+  adapter: "sqlite3",
+  database: ":memory:"
+})
 
 RSpec.configure do |config|
 
