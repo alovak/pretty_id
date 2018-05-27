@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module PrettyId
   # taken from Ruby 2.5 implementation
   class SecRandom
