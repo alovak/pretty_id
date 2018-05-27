@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alovak/pretty_id.svg?branch=master)](https://travis-ci.org/alovak/pretty_id)
+
 # PrettyId
 
 How does Stripe generate object ids?
