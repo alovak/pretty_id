@@ -9,7 +9,13 @@ How does Stripe generate object ids?
 
 [source](https://www.quora.com/How-does-Stripe-generate-object-ids)
 
-With PrettyId you can generate Stripe-like IDs for your ActiveRecord models.
+With PrettyId you can generate Stripe-like IDs for your ActiveRecord models:
+
+```
+charge.id       #=> ch_xxx
+user.id         #=> usr_xxx
+transaction.id  #=> txn_xxx
+```
 
 ## Usage
 
