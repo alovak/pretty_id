@@ -7,7 +7,9 @@ module PrettyId
   extend ActiveSupport::Concern
 
   included do
-    self.primary_key = 'id'
+    def self.primary_key
+      'id'
+    end
   end
 
   class_methods do
