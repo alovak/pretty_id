@@ -6,6 +6,10 @@ require 'active_support/concern'
 module PrettyId
   extend ActiveSupport::Concern
 
+  included do
+    self.primary_key = 'id'
+  end
+
   class_methods do
     def id_prefix=(prefix)
       @id_prefix = prefix

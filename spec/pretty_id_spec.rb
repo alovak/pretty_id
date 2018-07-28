@@ -58,4 +58,8 @@ RSpec.describe PrettyId do
       expect(account.id).to match /^acc_live/
     end
   end
+
+  it 'sets primary_key to id' do
+    expect(Account.primary_key).to eq('id')
+  end
 end
