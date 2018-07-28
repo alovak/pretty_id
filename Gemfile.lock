@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    prettyid (0.1.0)
+    prettyid (0.1.2)
       activerecord (>= 4.2.0)
       activesupport (>= 4.2.0)
 
