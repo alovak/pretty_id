@@ -91,7 +91,7 @@ Or install it yourself as:
 
 
 
-## Perfomance
+## Performance
 
 If you care about performance, it's better to measure it yourself :) I have measured method that generates id (```rake bm```). Here are results for 1M calls:
 
