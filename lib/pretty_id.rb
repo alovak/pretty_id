@@ -10,6 +10,8 @@ module PrettyId
     def self.primary_key
       'id'
     end
+
+    self.id_separator = '_'
   end
 
   class_methods do
@@ -19,6 +21,14 @@ module PrettyId
 
     def id_prefix
       @id_prefix || name.downcase[0, 3]
+    end
+
+    def id_separator=(separator)
+      @id_separator = separator
+    end
+
+    def id_separator
+      @id_separator
     end
   end
 

@@ -7,7 +7,7 @@ module PrettyId
     end
 
     def id
-      "#{prefix}_#{SecRandom.alphanumeric(length)}"
+      "#{prefix}#{separator}#{SecRandom.alphanumeric(length)}"
     end
 
     def length
@@ -20,6 +20,10 @@ module PrettyId
       else
         record.class.id_prefix
       end
+    end
+
+    def separator
+      record.class.id_separator
     end
   end
 end
