@@ -41,6 +41,26 @@ RSpec.describe PrettyId do
     end
   end
 
+  context 'when id separator is specified' do
+    context 'when separator is not nil' do
+      it 'creates id with specified separator' do
+        Account.id_separator = '#'
+        account = Account.create!
+
+        expect(account.id).to match /^acnt#/
+      end
+    end
+
+    context 'when separator is nil' do
+      it 'creates id with specified separator' do
+        Account.id_separator = nil
+        account = Account.create!
+
+        expect(account.id).to match /^acnt(\w+)/
+      end
+    end
+  end
+
   context 'when id prefix is specified as Proc' do
     it "creates id with specified prefix" do
       Account.id_prefix = -> (o) { o.type == 'test' ? 'acc_test' : 'acc_live' }
