@@ -71,6 +71,19 @@ account.save
 account.id #=> acc_test_....
 ```
 
+For cases when you don't want underscore (_) to be in id you can set it to nil:
+
+```
+class User < ActiveRecord::Base
+  include PrettyId
+
+  self.id_prefix = 'usr'
+  self.id_separator = nil
+end
+
+user.id #=> usrPZUjZiIF3bnZ
+```
+
 ## Installation
 
 **Note** There is another gem called 'pretty_id' so I had to rename mine into prettyid. So, be careful when you install gem and require it. It's a kind'a trick you do with 'activerecord' as well ;)
